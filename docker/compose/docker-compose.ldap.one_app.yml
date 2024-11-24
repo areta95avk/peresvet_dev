@@ -9,9 +9,9 @@ services:
       TZ: ${TIME_ZONE}
       LDAP_LOG_LEVEL: ${LDAP_LOG_LEVEL}
       
-    #volumes:
-    #  - /var/lib/ldap
-    #  - /etc/ldap/slapd.d
+    volumes:
+      - /var/lib/ldap
+      - /etc/ldap/slapd.d
     networks:
       - peresvet
 

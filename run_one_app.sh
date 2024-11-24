@@ -10,7 +10,7 @@ then
     srv=$1
 fi
 
-# 
+# -f docker/compose/docker-compose.ports.yml \
 
 sed -i "s/NGINX_HOST=.*/NGINX_HOST=$srv/" docker/compose/.cont_one_app.env
 docker compose --env-file docker/compose/.cont_one_app.env \
@@ -21,5 +21,4 @@ docker compose --env-file docker/compose/.cont_one_app.env \
 -f docker/compose/docker-compose.one_app.yml \
 -f docker/compose/docker-compose.grafana.yml \
 -f docker/compose/docker-compose.nginx.one_app.yml \
--f docker/compose/docker-compose.ports.yml \
 up
